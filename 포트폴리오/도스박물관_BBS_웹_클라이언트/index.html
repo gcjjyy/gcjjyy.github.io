@@ -844,14 +844,14 @@
                 
                   <h1>도스박물관 BBS 웹 클라이언트</h1>
                 
-                <p>바로가기: http://bbs.olddos.kr:9001</p>
-<p>기본적으로 웹브라우저 상에서 돌아가는 웹앱은 보안 때문에 자체적으로 Socket 통신을 할 수 없다.
+                <p>기본적으로 웹브라우저 상에서 돌아가는 웹앱은 보안 때문에 자체적으로 Socket 통신을 할 수 없다.
 따라서 TCP/IP 상에서 Telnet Protocol로 돌아가는 오래된 BBS 서비스를 웹브라우저에서 이용하기 위해서는, 중간다리역할을 해주는 중계 서버가 필요하다.</p>
 <p>본 프로젝트는 Express.js를 이용해서 브라우저와 텔넷 서버간에 통신을 중계해주는 서버를 만들고, 이전 VT100의 ANSI Escape 코드를 지원하는 프론트엔드 사이트를 만들어 오래된 BBS 를 웹브라우저에서 이용할 수 있게 만든 사이트이다.</p>
 <p>먼저 프론트엔드 웹사이트는 중계서버에 Socket.io 로 접속한다. 중계 서버는 텔넷 BBS 서버와 TCP/IP로 접속하여 Telnet Protocol을 통해 통신한다.
 HTML5 Canvas를 이용해 VT100의 Screen을 만들고, Screen 상에 커서위치에 따라 HTML Input Textbox를 이동시키며 입력을 받는다.</p>
 <p>사용자 입력은 UTF-8을 이용하여 이루어지므로, BBS서버의 인코딩인 KSC5601로 최대한 맞추기 위해 EUC-KR 인코딩을 이용한다.
 만약 Zmodem 업로드/다운로드 프로토콜인 B0* 값을 전달받으면 lszrz 를 이용하여 새로운 세션을 만든다음, stdout과 stderr을 캡쳐하여 웹사이트와 텔넷BBS 서버로 서로 통신하게 하여 파일 업로드/다운로드를 지원한다.</p>
+<p>바로가기: <a href="http://bbs.olddos.kr:9001">http://bbs.olddos.kr:9001</a></p>
 <p><img alt="스크린샷" src="../../images/bbs.png" /></p>
                 
               

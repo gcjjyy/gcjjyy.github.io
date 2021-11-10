@@ -847,8 +847,8 @@
                   <h1>유니티에서 Android Build Project에서 Play Game Service 로그인 안되는 문제</h1>
                 
                 <p>Play Game Service의 설정을 대부분 맞추고.. (출시는 안함)
-클라이언트 ID도 잘 생성 했고 OAuth 동의화면까지 제대로 구성하였다.
-그런데 'Play 게임에 연결중" 이라고만 뜨고 그 다음으로 넘어가지 않았다.
+클라이언트 ID도 잘 생성 했고 OAuth 동의화면까지 제대로 구성하였다.<br />
+그런데 'Play 게임에 연결중" 이라고만 뜨고 그 다음으로 넘어가지 않았다.<br />
 구글링을 열심히 한 결과 아래 방법으로 해결 가능했다.</p>
 <ol>
 <li>
@@ -858,8 +858,8 @@
 <p>Plugins/Android/ 내부에 user-proguard.txt 파일이 생성되는데, 해당 파일을 열어서 아래 내용 작성후 저장하면 된다.</p>
 </li>
 </ol>
-<p>-keep class com.google.games.<em><em> { <em>; }
--keep interface com.google.games.</em></em> { </em>; } </p>
+<p>-keep class com.google.games.<em><em> { <em>; }<br />
+-keep interface com.google.games.</em></em> { </em>; }</p>
                 
               
               
