@@ -661,8 +661,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/2019%EB%85%84%EC%97%90_%EB%A7%8C%EB%93%A0_MSDOS%EC%9A%A9_%EA%B2%8C%EC%9E%84/" class="md-nav__link">
-        2019년에 만든 MSDOS용 게임
+      <a href="../../../%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/2019%EB%85%84%EC%97%90_%EB%A7%8C%EB%93%A0_DOS%EC%9A%A9_%EA%B2%8C%EC%9E%84/" class="md-nav__link">
+        2019년에 만든 DOS용 게임
       </a>
     </li>
   
@@ -870,8 +870,9 @@
 <p>Plugins/Android/ 내부에 user-proguard.txt 파일이 생성되는데, 해당 파일을 열어서 아래 내용 작성후 저장하면 된다.</p>
 </li>
 </ol>
-<p>-keep class com.google.games.<em><em> { <em>; }<br />
--keep interface com.google.games.</em></em> { </em>; }</p>
+<pre><code class="language-java">-keep class com.google.games.** { _; }  
+-keep interface com.google.games._* { *; }
+</code></pre>
                 
               
               

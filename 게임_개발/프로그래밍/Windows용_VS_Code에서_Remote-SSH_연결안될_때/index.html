@@ -661,8 +661,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/2019%EB%85%84%EC%97%90_%EB%A7%8C%EB%93%A0_MSDOS%EC%9A%A9_%EA%B2%8C%EC%9E%84/" class="md-nav__link">
-        2019년에 만든 MSDOS용 게임
+      <a href="../../../%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/2019%EB%85%84%EC%97%90_%EB%A7%8C%EB%93%A0_DOS%EC%9A%A9_%EA%B2%8C%EC%9E%84/" class="md-nav__link">
+        2019년에 만든 DOS용 게임
       </a>
     </li>
   
@@ -858,11 +858,13 @@
                 
                   <h1>Windows용 VS Code에서 Remote SSH 연결안될 때</h1>
                 
-                <p>Windows 10에서 Visual Studio Code를 사용해 Remote-SSH Extension을 사용할 때 오류가 났었다.<br />
-Path변수가 String으로 제공되어야 하는데 undefined 라는 오류인데, Extension Settings에 가면 Remote.SSH: Path 라는 값이 있다.<br />
+                <p>Windows 10에서 Visual Studio Code를 사용해 Remote-SSH Extension을 사용할 때 오류가 났었다.  </p>
+<blockquote>
+<p>오류 메시지: Could not establish connection to "URL": The "path" argument must be of type string. Received undefined.</p>
+</blockquote>
+<p>Path변수가 String으로 제공되어야 하는데 undefined 라는 오류인데, Extension Settings에 가면 Remote.SSH: Path 라는 값이 있다.<br />
 여기에 ssh 클라이언트 실행파일의 절대경로를 써 주어야 하는데, Windows 10의 경우는 C:\Windows\System32\OpenSSH\ssh.exe 을 써주면 정상적으로 동작한다.<br />
 그 외에.. Windows 10에서 ssh key를 만드는 법은 리눅스나 맥과 동일하게 ssh-keygen으로 만들면 된다.</p>
-<p><img alt="스크린샷" height="100px" src="../../../images/vscode_ssh.png" width="400px" /></p>
                 
               
               
