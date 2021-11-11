@@ -879,14 +879,14 @@ Docker를 사용하면서 Cross Platform Build를 지원하자 해서 Docker를 
 <p>많은 사람들이 잘 모르고 지나가는 부분인데, MacOS는 원래 MacOS 확장 (저널링) 이라는 FS가 기본이었다. 해당 FS는 Case-sensitive한 FS이기 때문에
 대소문자를 구별한다. 이 경우에는 Docker 사용시에 파일명의 대소문자 때문에 문제가 발생하지 않고, 리눅스와 동일하게 동작한다.</p>
 <p>그런데 애플은 몇 년 전부터 APFS를 기본으로 사용하고 있고 대소문자 구별을 하지 않는다. APFS도 대소문자 구별을 할 수 있지만 그러려면 하드를 포맷해야 한다.</p>
-<p>만약에 인클루드 순서가 다음과 같다고 하면</p>
-<pre><code>1. include/media/Debug.h
+<p>만약에 인클루드 순서가 다음과 같다고 하면
+<div class="highlight"><pre><span></span><code>1. include/media/Debug.h
 2. include/network/debug.h
-</code></pre>
-<p>이렇게 되어 있을 때, Docker 안에서</p>
-<pre><code class="language-c++">#include &lt;debug.h&gt;
-</code></pre>
-<p>라는 코드를 실행하면, Linux에서는 2번이 인클루드 되지만, Mac의 기본 APFS에서는 1번이 인클루드가 된다. 동일한 Docker 환경인데도 말이다.
+</code></pre></div></p>
+<p>이렇게 되어 있을 때, Docker 안에서
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;debug.h&gt;</span><span class="cp"></span>
+</code></pre></div>
+라는 코드를 실행하면, Linux에서는 2번이 인클루드 되지만, Mac의 기본 APFS에서는 1번이 인클루드가 된다. 동일한 Docker 환경인데도 말이다.
 이것은 Docker가 OS를 아예 가상화 하는 것이 아니라, Filesystem의 기본은 OS의 것을 그대로 사용하기 때문에 발생하는 문제이다.</p>
 <p>따라서 Linux와 Mac에서 같은 Docker 환경을 제공하려면, 인클루드 패스를 나누거나, 대소문자만 다른 같은 파일명을 사용해서는 안된다.</p>
 <p>그 다음은 Mac과 Windows에서 동일하게 나타나는 현상인데, 빌드속도가 어마무시하게 늘어난다.

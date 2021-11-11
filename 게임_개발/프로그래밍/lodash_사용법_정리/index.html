@@ -1066,77 +1066,77 @@
                   <h1>Lodash 사용법 정리</h1>
                 
                 <h4 id="import">Import</h4>
-<pre><code class="language-js">// Common JS
-const _ = require('lodash')
+<div class="highlight"><pre><span></span><code><span class="c1">// Common JS</span>
+<span class="kd">const</span> <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lodash&#39;</span><span class="p">)</span>
 
-// ES6
-import * as _ from 'lodash'
-</code></pre>
+<span class="c1">// ES6</span>
+<span class="k">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">_</span> <span class="kr">from</span> <span class="s1">&#39;lodash&#39;</span>
+</code></pre></div>
 <h4 id="deep-copy">오브젝트 깊은 복사(Deep Copy)</h4>
-<pre><code class="language-js">const clone = _.cloneDeep(original)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">clone</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">cloneDeep</span><span class="p">(</span><span class="nx">original</span><span class="p">)</span>
+</code></pre></div>
 <h4 id="exception">Exception없이 오브젝트의 필드 가져오기</h4>
-<pre><code class="language-js">// post, post.article, post.article.user 중 하나라도 없을 경우에
-// 기본값(없을 경우 undefined) 리턴
-const userName = _.get(store, 'post.article.user.name', 'Default Value')
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// post, post.article, post.article.user 중 하나라도 없을 경우에</span>
+<span class="c1">// 기본값(없을 경우 undefined) 리턴</span>
+<span class="kd">const</span> <span class="nx">userName</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">store</span><span class="p">,</span> <span class="s1">&#39;post.article.user.name&#39;</span><span class="p">,</span> <span class="s1">&#39;Default Value&#39;</span><span class="p">)</span>
+</code></pre></div>
 <h4 id="_1">필드값에 따른 필터링</h4>
-<pre><code class="language-js">// 오브젝트 배열에서 deleted가 false인 오브젝트들만 필터링
-const filteredPosts = _.filter(posts, { deleted: false })
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// 오브젝트 배열에서 deleted가 false인 오브젝트들만 필터링</span>
+<span class="kd">const</span> <span class="nx">filteredPosts</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">posts</span><span class="p">,</span> <span class="p">{</span> <span class="nx">deleted</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span>
+</code></pre></div>
 <h4 id="_2">인덱스 검색</h4>
-<pre><code class="language-js">// 오브젝트 배열에서 id값이 'FindID'인 오브젝트를 찾아 그 인덱스를 리턴
-const index = _.findIndex(posts, { id: 'FindID' })
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// 오브젝트 배열에서 id값이 &#39;FindID&#39;인 오브젝트를 찾아 그 인덱스를 리턴</span>
+<span class="kd">const</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">posts</span><span class="p">,</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;FindID&#39;</span> <span class="p">})</span>
+</code></pre></div>
 <h4 id="_3">여러 인자로 오브젝트 배열 정렬</h4>
-<pre><code class="language-js">// 먼저 'score'를 기준으로 정렬 후, 'createdAt'으로 정렬
-const comments = _.sortBy(comments, ['score', 'createdAt'])
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1">// 먼저 &#39;score&#39;를 기준으로 정렬 후, &#39;createdAt&#39;으로 정렬</span>
+<span class="kd">const</span> <span class="nx">comments</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">sortBy</span><span class="p">(</span><span class="nx">comments</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">,</span> <span class="s1">&#39;createdAt&#39;</span><span class="p">])</span>
+</code></pre></div>
 <h4 id="dictionary-array">Dictionary를 Array로 변경</h4>
-<pre><code class="language-js">const dict = {
-  'id-1': { value: 1 },
-  'id-2': { value: 2 },
-  'id-3': { value: 3 }
-}
-const array = _.values(dict)
-console.log(array)
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">dict</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;id-1&#39;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">1</span> <span class="p">},</span>
+  <span class="s1">&#39;id-2&#39;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">2</span> <span class="p">},</span>
+  <span class="s1">&#39;id-3&#39;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">3</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">dict</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span>
 
-// 출력값
-// [ { value: 1 }, { value: 2 }, { value: 3 } ]
-</code></pre>
+<span class="c1">// 출력값</span>
+<span class="c1">// [ { value: 1 }, { value: 2 }, { value: 3 } ]</span>
+</code></pre></div>
 <h4 id="_4">배열이나 오브젝트가 비어있는지 확인</h4>
-<pre><code class="language-js">const empty = _.isEmpty(obj)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">empty</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
+</code></pre></div>
 <h4 id="_5">오브젝트 배열에서 모든 오브젝트에 대해 특정 필드를 제거하기</h4>
-<pre><code class="language-js">const images = [
-  { src: 'src-1', name: 'name-1', size: 10 },
-  { src: 'src-2', name: 'name-2', size: 20 },
-  { src: 'src-3', name: 'name-3', size: 30 }
-]
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">images</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src-1&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;name-1&#39;</span><span class="p">,</span> <span class="nx">size</span><span class="o">:</span> <span class="mf">10</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src-2&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;name-2&#39;</span><span class="p">,</span> <span class="nx">size</span><span class="o">:</span> <span class="mf">20</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src-3&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;name-3&#39;</span><span class="p">,</span> <span class="nx">size</span><span class="o">:</span> <span class="mf">30</span> <span class="p">}</span>
+<span class="p">]</span>
 
-// 모든 오브젝트들에 대해 'src' 필드를 제거
-const newImages = images.map((image) =&gt; _.omit(image, 'src'))
-console.log(newImages)
+<span class="c1">// 모든 오브젝트들에 대해 &#39;src&#39; 필드를 제거</span>
+<span class="kd">const</span> <span class="nx">newImages</span> <span class="o">=</span> <span class="nx">images</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">image</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">_</span><span class="p">.</span><span class="nx">omit</span><span class="p">(</span><span class="nx">image</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">))</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newImages</span><span class="p">)</span>
 
-// 출력값
-// [ { name: 'name-1', size: 10 },
-//   { name: 'name-2', size: 20 },
-//   { name: 'name-3', size: 30 } ]
-</code></pre>
+<span class="c1">// 출력값</span>
+<span class="c1">// [ { name: &#39;name-1&#39;, size: 10 },</span>
+<span class="c1">//   { name: &#39;name-2&#39;, size: 20 },</span>
+<span class="c1">//   { name: &#39;name-3&#39;, size: 30 } ]</span>
+</code></pre></div>
 <h4 id="dictionary">오브젝트 배열을 Dictionary로 변경</h4>
-<pre><code class="language-js">const array = [
-  { id: 'id-1', value: 1 },
-  { id: 'id-2', value: 2 },
-  { id: 'id-3', value: 3 }
-]
-const dict = _.keyBy(array, 'id')
-console.log(dict)
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;id-1&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">1</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;id-2&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">2</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;id-3&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">3</span> <span class="p">}</span>
+<span class="p">]</span>
+<span class="kd">const</span> <span class="nx">dict</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">keyBy</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dict</span><span class="p">)</span>
 
-// 출력값
-// { 'id-1': { id: 'id-1', value: 1 },
-//   'id-2': { id: 'id-2', value: 2 },
-//   'id-3': { id: 'id-3', value: 3 } }
-</code></pre>
+<span class="c1">// 출력값</span>
+<span class="c1">// { &#39;id-1&#39;: { id: &#39;id-1&#39;, value: 1 },</span>
+<span class="c1">//   &#39;id-2&#39;: { id: &#39;id-2&#39;, value: 2 },</span>
+<span class="c1">//   &#39;id-3&#39;: { id: &#39;id-3&#39;, value: 3 } }</span>
+</code></pre></div>
                 
               
               

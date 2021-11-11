@@ -876,13 +876,13 @@
 이 때 Swap Memory를 설정하면 제대로 돌아가지 않던 프로그램들이 나름 잘 돌아간다.
 Swap Memory란 램이 부족할 경우 하드디스크를 Paging하여 메모리로 사용하는 방법이다.
 root 권한으로 아래 명령어들을 입력하면 2G의 Swap Memory를 생성한다. (Centos 7 기준)</p>
-<pre><code class="language-bash">fallocate -l 2G /swapfile
-dd if=/dev/zero of=/swapfile count=2048 bs=1M
-chmod 600 /swapfile
+<div class="highlight"><pre><span></span><code>fallocate -l 2G /swapfile
+dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/swapfile <span class="nv">count</span><span class="o">=</span><span class="m">2048</span> <span class="nv">bs</span><span class="o">=</span>1M
+chmod <span class="m">600</span> /swapfile
 mkswap /swapfile
 swapon /swapfile
-echo &quot;/swapfile swap swap defaults 0 0&quot; &gt;&gt; /etc/fstab
-</code></pre>
+<span class="nb">echo</span> <span class="s2">&quot;/swapfile swap swap defaults 0 0&quot;</span> &gt;&gt; /etc/fstab
+</code></pre></div>
                 
               
               
