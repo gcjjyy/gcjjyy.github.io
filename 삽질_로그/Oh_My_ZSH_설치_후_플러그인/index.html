@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#iterm2-history" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -593,9 +598,38 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Oh My ZSH 설치 후 플러그인
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Oh My ZSH 설치 후 플러그인
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iterm2-history" class="md-nav__link">
+    iterm2에서 탭별로 History분리하기
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1016,6 +1050,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iterm2-history" class="md-nav__link">
+    iterm2에서 탭별로 History분리하기
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1035,6 +1084,11 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>git clone git://github.com/zsh-users/zsh-autosuggestions <span class="nv">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions
 </code></pre></div>
+<h3 id="iterm2-history">iterm2에서 탭별로 History분리하기</h3>
+<p>~/.zshrc의 # User configuration에 아래 2줄 추가
+<div class="highlight"><pre><span></span><code>unsetopt inc_append_history
+unsetopt share_history
+</code></pre></div></p>
 
 
 
