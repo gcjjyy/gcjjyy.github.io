@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="http://gcjjyy.io/%EC%82%BD%EC%A7%88_%EB%A1%9C%EA%B7%B8/Fedora_38_on_Macbook_Pro/">
+        <link rel="canonical" href="https://gcjjyy.alonest.com/%EC%82%BD%EC%A7%88_%EB%A1%9C%EA%B7%B8/Fedora_38_on_Macbook_Pro/">
       
       
         <link rel="prev" href="../CentOS_7_Minimal/">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Fedora 38 on Macbook Pro - gcjjyy.io</title>
+        <title>Fedora 38 on Macbook Pro - gcjjyy.alonest.com</title>
       
     
     
@@ -89,7 +89,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="gcjjyy.io" class="md-header__button md-logo" aria-label="gcjjyy.io" data-md-component="logo">
+    <a href="../.." title="gcjjyy.alonest.com" class="md-header__button md-logo" aria-label="gcjjyy.alonest.com" data-md-component="logo">
       
   <img src="../../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            gcjjyy.io
+            gcjjyy.alonest.com
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -200,12 +200,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="gcjjyy.io" class="md-nav__button md-logo" aria-label="gcjjyy.io" data-md-component="logo">
+    <a href="../.." title="gcjjyy.alonest.com" class="md-nav__button md-logo" aria-label="gcjjyy.alonest.com" data-md-component="logo">
       
   <img src="../../assets/logo.png" alt="logo">
 
     </a>
-    gcjjyy.io
+    gcjjyy.alonest.com
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1177,8 +1177,7 @@ sudo<span class="w"> </span>akmods
 sudo<span class="w"> </span>shutdown<span class="w"> </span>-r<span class="w"> </span>now
 </code></pre></div>
 <h3 id="bluetooth-pairing">Bluetooth Pairing문제</h3>
-<p>Buds Pro를 연결하려고 하니 Pairing이 잘 안되었다. 아래 명령어를 통해 설정파일의 ControllerMode가
-주석되어 있었는데, 해당 값을 bledr로 설정하니 페어링 역시 잘 되었다.</p>
+<p>Buds Pro를 연결하려고 하니 Pairing이 잘 안되었다. 아래 명령어를 통해 설정파일의 'ControllMode' 값이 주석되어 있었는데, 해당 값을 bledr로 설정하니 페어링 역시 잘 되었다.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vi<span class="w"> </span>/etc/bluetooth/main.conf
 </code></pre></div>
 <p>위 방법으로 잘 안된다면 bluetoothctl로 soft unblock을 해제하는 것도 시도해봄직 하다.</p>
